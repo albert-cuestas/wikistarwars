@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+final class StarshipsRouter {
+    static func view() -> StarshipsView {
+        let router = StarshipsRouter()
+        let viewModel = StarshipsViewModel(router: router)
+        let view = StarshipsView(viewModel: viewModel)
+
+        return view
+    }
+}

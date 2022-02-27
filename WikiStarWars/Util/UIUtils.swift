@@ -8,13 +8,17 @@
 import UIKit
 
 final class UIUtils {
-
-    public func parseNumberFormatString(_ value: String, unit: String) -> String {
+    public static func parseNumberFormatString(_ value: String, unit: String) -> String {
         if !value.isEmpty {
-            let val = Int(value)
-            if val != nil {
-                return "\(value)\(unit)"
+            if value.contains("n/a") ||
+                value.contains("unknown")
+            {
+                return value
             }
+
+            guard let val = Int(value) else { return value }
+
+            return "\(val)\(unit)"
         }
         return value
     }

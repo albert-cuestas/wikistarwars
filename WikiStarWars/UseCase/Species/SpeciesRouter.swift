@@ -12,7 +12,7 @@ final class SpeciesRouter {
         let router = SpeciesRouter()
         let viewModel = SpeciesViewModel(router: router)
         let view = SpeciesView(viewModel: viewModel)
-        
+
         return view
     }
 }

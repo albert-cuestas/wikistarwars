@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CharactersViewOLD: View {
+struct CharactersView: View {
     @ObservedObject var viewModel: CharactersViewModel
     
     private(set) var autoLoad: Bool = true
@@ -66,7 +66,7 @@ struct CharactersViewOLD: View {
     }
 }
 
-extension CharactersViewOLD: SearchDelegate {
+extension CharactersView: SearchDelegate {
     var placeHolder: String {
         "Find your favorite character"
     }
@@ -76,7 +76,7 @@ extension CharactersViewOLD: SearchDelegate {
     }
 }
 
-extension CharactersViewOLD: GridViewDelegate {
+extension CharactersView: GridViewDelegate {
     var title: String {
         ElementType.people.title
     }
@@ -98,7 +98,7 @@ extension CharactersViewOLD: GridViewDelegate {
     }
 }
 
-struct CharactersViewOLD_Previews: PreviewProvider {
+struct CharactersView_Previews: PreviewProvider {
     static var previews: some View {
         CharactersRouter.view()
     }

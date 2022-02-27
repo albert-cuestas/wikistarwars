@@ -33,22 +33,23 @@ struct SpeciesView: View {
                             }
                             HStack {
                                 Text("Avg Lifespan").foregroundColor(.gray).bold()
-                                Text("\(element.averageLifespan) ").font(.body)
-                                Spacer()
+                                Text(UIUtils.parseNumberFormatString(element.averageLifespan, unit: " years")).font(.body)
+                            }
+                            HStack {
                                 Text("Avg Height").foregroundColor(.gray).bold()
-                                Text("\(element.averageHeight)").font(.body)
+                                Text(UIUtils.parseNumberFormatString(element.averageHeight, unit: "cm")).font(.body)
                             }
-                            HStack {
+                            VStack(alignment: .leading) {
                                 Text("Hair Color(s)").foregroundColor(.gray).bold()
-                                Text("\(element.hairColors)").font(.body)
+                                Text("\(element.hairColors)").font(.body).lineLimit(nil).multilineTextAlignment(.leading)
                             }
-                            HStack {
+                            VStack(alignment: .leading) {
                                 Text("Skin Color(s)").foregroundColor(.gray).bold()
-                                Text("\(element.skinColors)").font(.body)
+                                Text("\(element.skinColors)").font(.body).lineLimit(nil).multilineTextAlignment(.leading)
                             }
-                            HStack {
+                            VStack(alignment: .leading) {
                                 Text("Eye Color(s)").foregroundColor(.gray).bold()
-                                Text("\(element.eyeColors)").font(.body)
+                                Text("\(element.eyeColors)").font(.body).lineLimit(nil).multilineTextAlignment(.leading)
                             }
                         }.padding().frame(maxWidth: .infinity, alignment: .leading).lineLimit(nil).multilineTextAlignment(.leading).fixedSize(horizontal: false, vertical: true)
                             .frame(maxWidth: .infinity)

@@ -27,7 +27,7 @@ enum Categories: CaseIterable {
                 return "Vehicles"
         }
     }
-    
+
     var icon: String {
         switch self {
             case .characters:
@@ -44,7 +44,7 @@ enum Categories: CaseIterable {
                 return "vehicles"
         }
     }
-    
+
     var destination: AnyView {
         switch self {
             case .characters:
@@ -52,13 +52,13 @@ enum Categories: CaseIterable {
             case .films:
                 return AnyView(FilmsRouter.view())
             case .planets:
-                return AnyView(CharactersRouter.view())
+                return AnyView(PlanetsRouter.view())
             case .species:
-                return AnyView(CharactersRouter.view())
+                return AnyView(SpeciesRouter.view())
             case .starships:
-                return AnyView(CharactersRouter.view())
+                return AnyView(StarshipsRouter.view())
             case .vehicles:
-                return AnyView(CharactersRouter.view())
+                return AnyView(VehiclesRouter.view())
         }
     }
 }

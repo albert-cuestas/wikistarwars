@@ -9,4 +9,5 @@ import Foundation
 
 protocol SearchDelegate {
     func search(query: String)
+    var placeHolder: String { get }
 }

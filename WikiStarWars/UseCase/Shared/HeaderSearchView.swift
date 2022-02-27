@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct HeaderSearchView: View {
-//    var element: ElementType
-    @ObservedObject var viewModel: HomeViewModel
-    @Binding var fieldTextSearch: String
+    var delegate: SearchDelegate
+    @State private var fieldTextSearch: String = .empty
     @State private var isEditing: Bool = false
     @State private var isFocus: Bool = false
 
@@ -23,7 +22,7 @@ struct HeaderSearchView: View {
                     .padding(.leading, 16)
                     .opacity(0.5)
 
-                TextField("Busca tu personaje favorito", text: $fieldTextSearch)
+                TextField(delegate.placeHolder, text: $fieldTextSearch)
                     .padding(8).font(Font.system(size: 15))
                     .foregroundColor(Color("TextColor")).accentColor(Color("TextColor"))
                     .onTapGesture {
@@ -31,7 +30,7 @@ struct HeaderSearchView: View {
                         isEditing = true
                     }.onChange(of: fieldTextSearch) { _ in
                         if !fieldTextSearch.isEmpty {
-                            viewModel.search(query: fieldTextSearch)
+                            delegate.search(query: fieldTextSearch)
                         }
                     }
                     .showClearButton($fieldTextSearch)
@@ -44,28 +43,15 @@ struct HeaderSearchView: View {
                     isFocus = false
                     fieldTextSearch = ""
                     hideKeyboard()
-                    viewModel.search(query: fieldTextSearch)
+                    delegate.search(query: fieldTextSearch)
                 }, label: { Text("Cancel") }).frame(height: 21)
                     .padding(.trailing, 15)
                     .foregroundColor(.blue)
             }
         }
-        .background(Color(red: 0.1, green: 0.1, blue: 0.2))
+        .background(Color.backgroundColor)
         .onChange(of: fieldTextSearch) { _ in
             isEditing = !fieldTextSearch.isEmpty || isFocus
         }
-    }
-}
-
-struct HeaderSearchView_Previews: PreviewProvider {
-    static var previews: some View {
-        HeaderSearchView(viewModel: HomeViewModel(router: HomeRouter()), fieldTextSearch: .constant(""))
-            .preferredColorScheme(.dark)
-            .background(.orange)
-            .previewLayout(.fixed(width: 400, height: 70))
-        HeaderSearchView(viewModel: HomeViewModel(router: HomeRouter()), fieldTextSearch: .constant(""))
-            .preferredColorScheme(.light)
-            .background(.orange).opacity(0.7)
-            .previewLayout(.fixed(width: 400, height: 70))
     }
 }
