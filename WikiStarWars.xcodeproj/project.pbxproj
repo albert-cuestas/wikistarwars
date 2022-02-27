@@ -65,7 +65,6 @@
 		50751E2A27AE6B6200CD669F /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50751E2927AE6B6200CD669F /* People.swift */; };
 		5082BF5227CB5C7000F420E2 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5082BF5127CB5C7000F420E2 /* UIImageExtension.swift */; };
 		5082BF5427CB746B00F420E2 /* ElementType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5082BF5327CB746B00F420E2 /* ElementType.swift */; };
-		5082BF5727CB806600F420E2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5082BF5627CB806600F420E2 /* README.md */; };
 		50A750F927B24D71002A4703 /* Starhip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A750F827B24D71002A4703 /* Starhip.swift */; };
 		50C3EA1D27B8163600D38DCC /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3EA1C27B8163600D38DCC /* Characters.swift */; };
 		50CE286327B8D96A00130958 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CE286227B8D96A00130958 /* ActivityIndicator.swift */; };
@@ -136,7 +135,6 @@
 		50751E2927AE6B6200CD669F /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		5082BF5127CB5C7000F420E2 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		5082BF5327CB746B00F420E2 /* ElementType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementType.swift; sourceTree = "<group>"; };
-		5082BF5627CB806600F420E2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		50A750F827B24D71002A4703 /* Starhip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starhip.swift; sourceTree = "<group>"; };
 		50C3EA1C27B8163600D38DCC /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
 		50CE286227B8D96A00130958 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
@@ -203,7 +201,6 @@
 				500D69CF27ADA5BA00BBFDA9 /* Util */,
 				500D69C127ADA53100BBFDA9 /* Assets.xcassets */,
 				500D69C327ADA53100BBFDA9 /* Preview Content */,
-				5082BF5627CB806600F420E2 /* README.md */,
 			);
 			path = WikiStarWars;
 			sourceTree = "<group>";
@@ -507,7 +504,6 @@
 				5013F04927BA2F540012DEDC /* Starjhol.ttf in Resources */,
 				5034C71127BA2E7E00191BF6 /* LaunchScreen.storyboard in Resources */,
 				50417CFB27C2DCF800DFEF5C /* NewsCycle-Regular.ttf in Resources */,
-				5082BF5727CB806600F420E2 /* README.md in Resources */,
 				50417CFA27C2DCF800DFEF5C /* SfDistantGalaxyItalic.ttf in Resources */,
 				50417CF927C2DCF800DFEF5C /* NewsCycle-Bold.ttf in Resources */,
 			);
